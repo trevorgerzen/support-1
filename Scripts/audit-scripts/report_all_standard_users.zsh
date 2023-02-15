@@ -5,7 +5,7 @@
 #
 
 # Creates a list of users with a UID greater than 500
-# Users with a UID less than UID 500 are typically services accuonts
+# Users with a UID less than UID 500 are typically services accounts
 USER_LIST=($(/usr/bin/dscl . list /Users UniqueID |
     /usr/bin/awk '$2 > 500 {print $1}'))
 
